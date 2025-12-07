@@ -18,7 +18,7 @@ export default function Controls({ scorePoint, undoLast, playerA, playerB }) {
                  text-white border-2 border-white/40 shadow-lg
                  active:scale-95 transition-all duration-300"
     >
-      🏸 {playerA} +1
+      🏸 {  <h3>{playerA?.charAt(0).toUpperCase() + playerA?.slice(1)}</h3>} +1
     </button>
 
     {/* Player B +1 */}
@@ -30,7 +30,7 @@ export default function Controls({ scorePoint, undoLast, playerA, playerB }) {
                  text-white border-2 border-white/40 shadow-lg
                  active:scale-95 transition-all duration-300"
     >
-      🏸 {playerB} +1
+      🏸 {  <h3>{playerB?.charAt(0).toUpperCase() + playerB?.slice(1)}</h3>} +1
     </button>
 
   </div>

@@ -24,10 +24,13 @@ export default function Scoreboard({
 
       {/* Player Names */}
       <div className="text-xl font-semibold text-white mb-2 flex-row wrap-anywhere">
-        <h3>{playerA}</h3>
+        {/* <h3>{playerA?.charAt(0).toUppercase() + playerA?.slice(1)}</h3> */}
+        <h3>{playerA?.charAt(0).toUpperCase() + playerA?.slice(1)}</h3>
+
+        
         {/* <span className="text-green-300 font-bold">vs</span> {playerB} */}
         <h3 className="text-green-300 font-bold">vs</h3>
-        <h3>{playerB}</h3>
+        <h3>{playerB?.charAt(0).toUpperCase()+ playerB.slice(1)}</h3>
       </div>
 
       {/* Game Number */}
