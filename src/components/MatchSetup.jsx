@@ -137,6 +137,42 @@ export default function MatchSetup({
           </p>
         )}
 
+        {/* Match Type Selector */}
+<div className="mt-6">
+  <p className="text-white/80 text-lg mb-3 font-semibold">
+    Select Match Format
+  </p>
+
+  <div className="flex items-center justify-center gap-4">
+    <button
+      type="button"
+      onClick={() => setBestOf(3)}
+      className={`px-6 py-2 rounded-xl text-white font-semibold transition-all
+        border border-white/40 backdrop-blur-md
+        ${bestOf === 3 
+          ? "bg-green-600/70 shadow-lg shadow-green-400/30 scale-105" 
+          : "bg-white/10 hover:bg-white/20"
+        }`}
+    >
+      Best of 3
+    </button>
+
+    <button
+      type="button"
+      onClick={() => setBestOf(5)}
+      className={`px-6 py-2 rounded-xl text-white font-semibold transition-all
+        border border-white/40 backdrop-blur-md
+        ${bestOf === 5 
+          ? "bg-green-600/70 shadow-lg shadow-green-400/30 scale-105" 
+          : "bg-white/10 hover:bg-white/20"
+        }`}
+    >
+      Best of 5
+    </button>
+  </div>
+</div>
+
+
         {/* Start Button */}
         <div className="pt-6">
           <button

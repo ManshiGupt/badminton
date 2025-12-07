@@ -1,16 +1,92 @@
-# React + Vite
+🏸 Badminton Scoring App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean and modern web application for tracking badminton match scores.
+Supports live scoring, multiple games, undo functionality, and automatic match winner detection — all wrapped in a stylish, responsive UI.
 
-Currently, two official plugins are available:
+🔗 Live Demo: https://badminton123.netlify.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 How to Run the Project Locally
 
-## React Compiler
+Clone the repository
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+git clone <your-repo-url>
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Navigate to the project directory
+
+cd badminton-scoring-app
+
+
+Install dependencies
+
+npm install
+
+
+Start the development server
+
+npm start
+
+
+Open browser and go to:
+
+http://localhost:3000
+
+🧠 Approach
+
+The project is built using React (functional components + hooks).
+
+The scoring follow standard badminton rules:
+
+Game win at 21 points with a 2-point lead.
+
+If tied at 29–29, first to 30 wins.
+
+When a game ends:
+
+Scores reset
+
+New game begins
+
+Game result is added to history
+
+Match winner is determined based on Best of 3 or Best of 5.
+
+Undo feature removes only the most recent point.
+
+UI is styled using TailwindCSS, with a consistent neon-themed badminton look.
+
+Player names and match setup values are saved in localStorage to persist across reloads.
+
+The project is split into reusable components:
+
+MatchSetup
+
+LiveScore
+
+ScoreButtons
+
+GameSummary
+
+📌 Assumptions
+
+Only singles match format (Player A vs Player B).
+
+Supported match formats:
+
+Best of 3
+
+Best of 5
+
+Undo removes the last point only, not full game rollback.
+
+Designed as a general scoring helper — not for official tournament systems.
+
+No backend is required — everything runs client-side.
+
+🌐 Deployment
+
+The app is deployed on Netlify using continuous deployment.
+
+🔗 Live Deployment: https://badminton123.netlify.app/
+
+Any new changes pushed to the repository will auto-deploy.

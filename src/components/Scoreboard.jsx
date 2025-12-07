@@ -8,9 +8,9 @@ export default function Scoreboard({
   gameNumber,
   bestOf,
 }) {
-    useEffect(()=>{
-        localStorage.get("playerA")
-    },[])
+    // useEffect(()=>{
+    //     localStorage.get("playerA")
+    // },[])
   return (
     <div className="">
       {/* Live Score Title */}
