@@ -65,7 +65,7 @@ const checkGameEnd = (game, allGames) => {
   const winsA = allGames.filter((g) => g.winner === "A").length;
   const winsB = allGames.filter((g) => g.winner === "B").length;
 
-  const targetWins = Math.ceil(bestOf / 2);
+  // const targetWins = Math.ceil(bestOf / 2);
 
   // If match finished
   if (winsA === targetWins || winsB === targetWins) {
@@ -111,6 +111,7 @@ const checkGameEnd = (game, allGames) => {
 
   return (
     <div style={{ padding: 20, maxWidth: 400, margin: "auto" }}>
+     
       {step === "setup" && (
         <MatchSetup
           playerA={playerA}
